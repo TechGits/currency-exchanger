@@ -1,17 +1,16 @@
 public class CurrencyConverter {
     public static void main(String[] args) {
+        double poundOverEuroRatio = 1.16;
+        double euroOverPoundRatio = 0.86;
+
         java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("Birkleys Bank PLC");
+
+        System.out.println("\nBirkleys Bank PLC");
         System.out.println("-----------------\n");
-        System.out.print("How many Euro would you like to exchange into pounds: €");
-        double euroOverPoundRatio = scan.nextDouble();
-        System.out.print("How many pounds sterling would you like to exchange into Euro: £");
-        double poundOverEuroRatio = scan.nextDouble();
-        System.out.println("OK, now I know enough.");
+             
         boolean finished = false;
         while (!finished) {
-            System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("Select your option:\n");
             System.out.println("   1 - Exchange pounds into euro");
             System.out.println("   2 - Exchange euro into pounds");
             System.out.println("   0 - Exit the program");
@@ -20,16 +19,17 @@ public class CurrencyConverter {
             int choice = scan.nextInt();
             switch (choice) {
             case 1:
-                System.out.print("How many pounds would you like to convert? ");
-                double pounds = scan.nextDouble();
-                double euro   = pounds * euroOverPoundRatio;
-                System.out.println("£" + pounds + " will give you " + euro + "€");
+                System.out.print("Enter number of pounds to exchange into Euro: £");
+                double userInputPounds = scan.nextDouble();
+
+                double yourEuro = userInputPounds * euroOverPoundRatio;
+                System.out.println("£" + userInputPounds + " gives you " +  "€"+yourEuro+" Euro.");
                 break;
             case 2:
-                System.out.print("How many euro would you like to convert? ");
-                euro   = scan.nextDouble();
-                pounds = euro * poundOverEuroRatio;
-                System.out.println(euro + "€ will give you £" + pounds);
+                System.out.print("Enter number of Euros to exchange into pounds: € ");
+                double userInputEuro   = scan.nextDouble();
+                double yourPounds = userInputEuro * euroOverPoundRatio;
+                System.out.println("£" + userInputEuro + " gives you " +  "£"+yourPounds);
                 break;
             case 0:
                 finished = true;
