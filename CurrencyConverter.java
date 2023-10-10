@@ -1,9 +1,11 @@
 public class CurrencyConverter {
     public static void main(String[] args) {
         java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.print("If I give you £1, how many Euro will you give me? ");
+        System.out.println("Birkleys Bank PLC");
+        System.out.println("-----------------\n");
+        System.out.print("How many Euro would you like to exchange into pounds: €");
         double euroOverPoundRatio = scan.nextDouble();
-        System.out.print("If I give you 1€, how many Sterling pounds will you give me? ");
+        System.out.print("How many pounds sterling would you like to exchange into Euro: £");
         double poundOverEuroRatio = scan.nextDouble();
         System.out.println("OK, now I know enough.");
         boolean finished = false;
@@ -36,6 +38,6 @@ public class CurrencyConverter {
                 System.out.println("Sorry, that is not a valid option");
             }
         }
-        System.out.println("Exiting the program");
+        System.out.println("Thank you for banking with Birkleys.");
     }
 }
