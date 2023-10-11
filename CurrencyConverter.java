@@ -1,4 +1,6 @@
+// Ricki Angel's Version
 public class CurrencyConverter {
+
     public static void main(String[] args) {
         double poundOverEuroRatio = 1.16;
         double euroOverPoundRatio = 0.86;
